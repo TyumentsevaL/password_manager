@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Password Manager</title>
+    <!--    Подключаем стили bootstrap-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <!--    Форма для отправки паролей-->
+    <form class="row needs-validation invisible mb-3">
+        <!--    Инфа о сайте-->
+        <div class="col-md-3 position-relative">
+            <label for="site" class="form-label">Сайт</label>
+            <input type="text" class="form-control" id="site" name="site" placeholder="https://example.com"
+                   required>
+        </div>
+        <!--    Инфа о логине-->
+        <div class="col-md-3 position-relative">
+            <label for="login" class="form-label">Логин</label>
+            <input type="text" class="form-control" id="login" name="login" placeholder="admin" required>
+        </div>
+        <!--    Инфа о пароле-->
+        <div class="col-md-3 position-relative">
+            <label for="password" class="form-label">Пароль</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="password"
+                   required>
+        </div>
+        <!--   Кнопка отправки-->
+        <div class="col-12 mt-3">
+            <button class="btn btn-primary" type="submit">Сохранить</button>
+        </div>
+    </form>
+    <!-- Контейнер для сохраненных паролей-->
+    <div class="passwords-container row">
+        <h1 class="h1">Сохранённые пароли</h1>
+    </div>
+</div>
+<!--    Подключаем скрипты для работы с БД-->
+<script src="js/db.js"></script>
+</body>
+</html>
